@@ -1,5 +1,4 @@
-import { BuildInfo,BuildReadiness,Date,Graphics,Header, ReasonsMeasures } from 'widgets';
-import { ImplementationStages } from 'widgets/implementation-stages';
+import { BuildInfo,BuildReadiness,Date,Graphics,Header, ImplementationStages,ReasonsMeasures } from 'widgets';
 
 export const HomePage = () => {
     return (

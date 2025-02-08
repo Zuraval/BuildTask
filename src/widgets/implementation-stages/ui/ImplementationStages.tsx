@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { ArrowIcon } from 'shared/assets/icons/arrow-icon';
 import { Navigation } from 'swiper/modules';
 import { Swiper, type SwiperRef,SwiperSlide } from 'swiper/react';
