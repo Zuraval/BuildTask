@@ -1,1 +1,1 @@
-export { Graphics } from './Graphics.tsx'
+export { Graphics } from './Graphics'
