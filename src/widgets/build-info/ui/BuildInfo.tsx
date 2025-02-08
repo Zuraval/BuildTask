@@ -1,6 +1,15 @@
 import { CameraIcon } from "shared/assets/icons/camera-icon";
 import { LinkIcon } from "shared/assets/icons/link-icon";
 
+import House11 from '../../../shared/assets/images/House1-1.png';
+import House12 from '../../../shared/assets/images/House1-2.png';
+import House13 from '../../../shared/assets/images/House1-3.png';
+import House14 from '../../../shared/assets/images/House1-4.png';
+import House21 from '../../../shared/assets/images/House2-1.png';
+import House22 from '../../../shared/assets/images/House2-2.png';
+import House23 from '../../../shared/assets/images/House2-3.png';
+import House24 from '../../../shared/assets/images/House2-4.png';
+
 export const BuildInfo = () => {
     return (
         <div className="">
@@ -8,24 +17,24 @@ export const BuildInfo = () => {
                 <div className="flex">
                     <div>
                         <div>
-                            <img src="src\shared\assets\images\House1-1.png" alt="building"/>
+                            <img src={House11} alt="building"/>
                         </div>
                         <div className="flex gap-[17px] mt-[11px] justify-center">
-                            <img src="src\shared\assets\images\House1-1.png" alt="building" className="size-[50px] radius-[8px]"/>
-                            <img src="src\shared\assets\images\House1-2.png" alt="building"/>
-                            <img src="src\shared\assets\images\House1-3.png" alt="building"/>
-                            <img src="src\shared\assets\images\House1-4.png" alt="building"/>
+                            <img src={House11} alt="building" className="size-[50px] radius-[8px]"/>
+                            <img src={House12} alt="building"/>
+                            <img src={House13} alt="building"/>
+                            <img src={House14} alt="building"/>
                         </div>
                     </div>
                     <div className="ml-[11px]">
                         <div>
-                            <img src="src\shared\assets\images\House2-1.png" alt="building"/>
+                            <img src={House21} alt="building"/>
                         </div>
                         <div className="flex gap-[17px] mt-[11px] justify-center">
-                            <img src="src\shared\assets\images\House2-1.png" alt="building" className="size-[50px] radius-[8px]"/>
-                            <img src="src\shared\assets\images\House2-2.png" alt="building"/>
-                            <img src="src\shared\assets\images\House2-3.png" alt="building"/>
-                            <img src="src\shared\assets\images\House2-4.png" alt="building"/>
+                            <img src={House21} alt="building" className="size-[50px] radius-[8px]"/>
+                            <img src={House22} alt="building"/>
+                            <img src={House23} alt="building"/>
+                            <img src={House24} alt="building"/>
                         </div>
                     </div>
                     <div className="flex flex-col gap-[20px] ml-[24px] w-[235px]">
