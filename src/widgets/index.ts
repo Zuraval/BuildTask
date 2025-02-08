@@ -1,6 +1,6 @@
 export { BuildReadiness } from './build- readiness'
 export { BuildInfo } from './build-info'
 export { Date } from './date'
-export { Graphics } from './Grahpics'
+export { Graphics } from './grahpics'
 export { Header } from './header'
 export { ReasonsMeasures } from './reasons-measures'

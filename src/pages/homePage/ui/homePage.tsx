@@ -17,6 +17,7 @@ export const HomePage = () => {
                 </div>
                 <div>
                     <Date />
+                    <div className='pt-[16px]' />
                     <BuildReadiness />
                 </div>
             </div>

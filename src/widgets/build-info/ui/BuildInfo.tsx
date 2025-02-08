@@ -61,13 +61,13 @@ export const BuildInfo = () => {
                             <p className="[20px]/[20px] font-semibold pt-[8px]">14</p>
                         </div>
                         <div>
-                            <p>Видеокамеры</p>
+                            <p className="text-[14px]/[13px] font-medium text-[#C00000]">Видеокамеры</p>
                             <CameraIcon className="mt-[8px]" />
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div className="flex gap-[30px] mt-[16px] ml-[38px]">
+                    <div className="flex gap-[55px] mt-[16px] ml-[38px]">
                         <div>
                             <p className="text-[14px]/[16px] font-normal text-[#505050]">Дата последнего продления <br />(количество продлений)</p>
                             <p className="text-[20px]/[20px] font-semibold pt-[8px]">25.09.2024 (5)</p>
