@@ -1,0 +1,25 @@
+@use "tailwindcss" as *;
+
+.container {
+    max-width: 1699px;
+    margin: 0 auto;
+}
+
+.scroll-bar::-webkit-scrollbar {
+    width: 8px;
+    padding-left: 14px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+    background-color: rgba(85, 105, 129, 0.3);
+    border-radius: 20px;
+    height: 71px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.bg-custom-gradient {
+    background-image: linear-gradient(to bottom, #C00000, #743949);
+}
