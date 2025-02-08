@@ -1,4 +1,5 @@
 import { BuildInfo,BuildReadiness,Date,Graphics,Header, ReasonsMeasures } from 'widgets';
+import { ImplementationStages } from 'widgets/implementation-stages';
 
 export const HomePage = () => {
     return (
@@ -21,7 +22,9 @@ export const HomePage = () => {
                     <BuildReadiness />
                 </div>
             </div>
-            
+            <div className='pt-[16px]' />
+            <ImplementationStages />
+            <div className='pt-[56px]' />
         </div>
     );
 }
