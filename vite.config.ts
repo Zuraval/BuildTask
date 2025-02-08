@@ -11,7 +11,6 @@ export default defineConfig({
             include: '**/*.svg?react',
         }),
     ],
-    base: '/HomePage/',
     resolve: {
         alias: {
             '@': '/src',
