@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { ArrowIcon } from 'shared/assets/icons/arrow-icon';
 
-import { reasonsMeasuresItems } from '../lib'
+import { reasonsMeasuresItems } from '../lib';
 
 import { InformationBlock } from './InformationBlock';
 
 export const ReasonsMeasures = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <div className="container bg-white rounded-[12px] text-[#161616]">
             <div className="p-[36px]">
@@ -28,8 +31,20 @@ export const ReasonsMeasures = () => {
                             <p className="text-[20px]/[20px] font-semibold">1</p>
                         </div>
                     </div>
-                    <div className='ml-auto'>
-                        <ArrowIcon className='h-[8px] w-[24px] text-[#505050]'/>
+                    <div 
+                        className='ml-auto cursor-pointer' 
+                        onClick={() => setIsExpanded(!isExpanded)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                setIsExpanded(!isExpanded);
+                            }
+                        }}
+                        role="button"
+                        tabIndex={0}
+                    >
+                        <ArrowIcon 
+                            className={`h-[8px] w-[24px] text-[#505050] transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                        />
                     </div>
                 </div>
                 <div>
@@ -39,10 +54,14 @@ export const ReasonsMeasures = () => {
                         <p className='w-[295px]'>Мероприятия по устранению</p>
                         <p className='w-[195px]'>Исполнитель</p>
                         <p className='w-[295px]'>Предпринятые меры</p>
-                        <p className='w-[100px]'>Срок устранения </p>
+                        <p className='w-[100px]'>Срок устранения</p>
                         <p className='w-[120px]'>Статус</p>
                     </div>
-                    <div className='flex flex-col gap-[20px] h-[250px] mt-[32px] overflow-y-auto scroll-bar'>
+                    <div 
+                        className={`flex flex-col relative gap-[20px] mt-[32px] overflow-y-auto scroll-bar transition-all duration-300 ${
+                            isExpanded ? 'h-auto' : 'h-[250px]'
+                        }`}
+                    >
                         {reasonsMeasuresItems.map((item) => (
                             <InformationBlock key={item.id} event={item.event} executor={item.executor} measure={item.measure} name={item.name} reason={item.reason} status={item.status} term={item.term} classNameBlock={item.classNameBlcok} />
                         ))}
@@ -51,4 +70,4 @@ export const ReasonsMeasures = () => {
             </div>
         </div>
     );
-}
+};

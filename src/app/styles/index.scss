@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+.scroll-bar {
+    position: relative;
+}
+
 .scroll-bar::-webkit-scrollbar {
     width: 8px;
 }
@@ -13,6 +17,8 @@
     background-color: rgba(85, 105, 129, 0.3);
     border-radius: 20px;
     height: 71px;
+    position: absolute;
+    right: -10px;
 }
 
 .scroll-bar::-webkit-scrollbar-track {

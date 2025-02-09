@@ -1,40 +1,94 @@
+import { useState } from 'react';
 import { CameraIcon } from "shared/assets/icons/camera-icon";
 import { LinkIcon } from "shared/assets/icons/link-icon";
 
-import House11 from '../../../shared/assets/images/House1-1.png';
-import House12 from '../../../shared/assets/images/House1-2.png';
-import House13 from '../../../shared/assets/images/House1-3.png';
-import House14 from '../../../shared/assets/images/House1-4.png';
-import House21 from '../../../shared/assets/images/House2-1.png';
-import House22 from '../../../shared/assets/images/House2-2.png';
-import House23 from '../../../shared/assets/images/House2-3.png';
-import House24 from '../../../shared/assets/images/House2-4.png';
+import House11 from '../../../shared/assets/images/House1-1.jpg';
+import House12 from '../../../shared/assets/images/House1-2.jpg';
+import House13 from '../../../shared/assets/images/House1-3.jpg';
+import House14 from '../../../shared/assets/images/House1-4.jpg';
+import House21 from '../../../shared/assets/images/House2-1.jpg';
+import House22 from '../../../shared/assets/images/House2-2.jpg';
+import House23 from '../../../shared/assets/images/House2-3.jpg';
+import House24 from '../../../shared/assets/images/House2-4.jpg';
 
 export const BuildInfo = () => {
+
+    const [selectedImage, setSelectedImage1] = useState<string>(House11);
+    const [activeIndex, setActiveIndex1] = useState<number>(0);
+
+    const [selectedImage2, setSelectedImage2] = useState<string>(House21);
+    const [activeIndex2, setActiveIndex2] = useState<number>(0);
+
+const handleImageClick = (image: string, index: number) => {
+    setSelectedImage1(image);
+    setActiveIndex1(index);
+};
+
+const handleImageClick2 = (image: string, index: number) => {
+    setSelectedImage2(image);
+    setActiveIndex2(index);
+};
+
     return (
         <div className="">
             <div className="py-[23px] pr-[24px] pl-[36px] bg-white rounded-[12px] w-[870px]">
                 <div className="flex">
                     <div>
                         <div>
-                            <img src={House11} alt="building"/>
+                            <img src={selectedImage} alt="building" className='h-[247px] w-[270px] rounded-[8px]'/>
                         </div>
                         <div className="flex gap-[17px] mt-[11px] justify-center">
-                            <img src={House11} alt="building" className="size-[50px] radius-[8px]"/>
-                            <img src={House12} alt="building"/>
-                            <img src={House13} alt="building"/>
-                            <img src={House14} alt="building"/>
+                            {[House11, House12, House13, House14].map((image, index) => (
+                                <button
+                                    type='button'
+                                    key={index}
+                                    onClick={() => handleImageClick(image, index)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter' || e.key === ' ') {
+                                            handleImageClick(image, index);
+                                        }
+                                    }}
+                                    className="p-0 border-none bg-transparent cursor-pointer"
+                                    aria-label={`Select image ${index + 1}`}
+                                >
+                                    <img
+                                        src={image}
+                                        alt="building"
+                                        className={`size-[50px] rounded-[8px] ${
+                                            index === activeIndex ? 'border-[2px] border-[#C00000]' : ''
+                                        }`}
+                                    />
+                                </button>
+                            ))}
                         </div>
                     </div>
                     <div className="ml-[11px]">
                         <div>
-                            <img src={House21} alt="building"/>
+                            <img src={selectedImage2} alt="building" className='h-[247px] w-[270px] rounded-[8px]'/>
                         </div>
                         <div className="flex gap-[17px] mt-[11px] justify-center">
-                            <img src={House21} alt="building" className="size-[50px] radius-[8px]"/>
-                            <img src={House22} alt="building"/>
-                            <img src={House23} alt="building"/>
-                            <img src={House24} alt="building"/>
+                            {[House21, House22, House23, House24].map((image2, index2) => (
+                                <button
+                                    type='button'
+                                    key={index2}
+                                    onClick={() => handleImageClick2(image2, index2)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter' || e.key === ' ') {
+                                            handleImageClick2(image2, index2);
+                                        }
+                                    }}
+                                    className="p-0 border-none bg-transparent cursor-pointer"
+                                    aria-label={`Select image ${index2 + 1}`}
+                                >
+                                    <img
+                                        src={image2}
+                                        alt="building"
+                                        className={`size-[50px] rounded-[8px] ${
+                                            index2 === activeIndex2 ? 'border-[2px] border-[#C00000]' : ''
+                                        }`}
+                                    />
+                                </button>
+                            ))}
                         </div>
                     </div>
                     <div className="flex flex-col gap-[20px] ml-[24px] w-[235px]">
