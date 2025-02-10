@@ -17,7 +17,7 @@ export const ImplementationStages = () => {
     const swiperRef = useRef<SwiperRef | null>(null);
 
     return (
-        <div className='container'>
+        <div className='container shadow-[0_10px_50px_0_#d2d4d8] rounded-[12px]'>
             <div className='p-[36px] rounded-[12px] bg-white'>
                 <div className='flex gap-[24px] items-center'>
                     <p className="text-[24px]/[24px] font-semibold">Этапы реализации</p>

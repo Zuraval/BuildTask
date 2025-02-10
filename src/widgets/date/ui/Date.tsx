@@ -30,8 +30,8 @@ export const Date = () => {
                 </div>
             </div>
             <div className="flex gap-[16px] pt-[16px]">
-                <div className="">
-                    <div className="relative flex flex-col px-[23px] pt-[8px] pb-[10px] rounded=[8px] bg-white items-center w-[257px]">
+                <div className="shadow-[0_10px_50px_0_#d2d4d8]">
+                    <div className="relative flex flex-col px-[23px] pt-[8px] pb-[10px] rounded-[8px] bg-white items-center w-[257px]">
                         <div className="flex text-[12px]/[12px] font-normal text-[#C00000] items-center ml-auto group">Срок изменен<WarningIcon className="ml-[5px] cursor-pointer" />
                             <div className="absolute z-10 left-[235px] bottom-[82px] hidden group-hover:block text-[#161616]">
                                 <div className="flex flex-col p-[16px] border border-[#C00000] rounded-[8px] bg-white gap-[8px] w-[395px]">
@@ -55,11 +55,11 @@ export const Date = () => {
                         <p className="text-[14px]/[14px] font-normal text-center pt-[12px]">Плановый ввод по <br /> директивному графику</p>
                     </div>
                 </div>
-                <div className="px-[16px] py-[18.5px] rounded=[8px] bg-white h-min w-full">
+                <div className="px-[16px] py-[18.5px] rounded-[8px] bg-white h-min w-full shadow-[0_10px_50px_0_#d2d4d8]">
                     <p className="text-[24px]/[24px] font-semibold text-center">20.11.2024</p>
                     <p className="text-[14px]/[14px] font-normal text-center pt-[12px]">Плановый ввод по <br /> договору</p>
                 </div>
-                <div className="px-[16px] py-[18.5px] rounded=[8px] bg-white w-full">
+                <div className="px-[16px] py-[18.5px] rounded-[8px] bg-white w-full shadow-[0_10px_50px_0_#d2d4d8]">
                     <p className="text-[24px]/[24px] font-semibold text-center">26.12.2024</p>
                     <p className="text-[14px]/[14px] font-normal text-center pt-[12px]">Прогнозируемый срок <br /> ввода</p>
                 </div>

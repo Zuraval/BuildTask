@@ -53,7 +53,7 @@ export const ReasonsMeasures = () => {
                         <p className='w-[243px]'>Причина срыва сроков</p>
                         <p className='w-[295px]'>Мероприятия по устранению</p>
                         <p className='w-[195px]'>Исполнитель</p>
-                        <p className='w-[295px]'>Предпринятые меры</p>
+                        <p className='w-[280px]'>Предпринятые меры</p>
                         <p className='w-[100px]'>Срок устранения</p>
                         <p className='w-[120px]'>Статус</p>
                     </div>

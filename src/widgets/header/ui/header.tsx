@@ -1,6 +1,6 @@
 export const Header = () => {
     return (
-        <div className="container bg-white rounded-[12px] text-[#161616]">
+        <div className="container bg-white rounded-[12px] text-[#161616] shadow-[0_10px_50px_0_#d2d4d8]">
             <div className="flex justify-between px-[36px] py-[22px] w-full">
                 <div className="flex flex-col gap-4">
                     <div className="flex gap-[22px] items-center">
